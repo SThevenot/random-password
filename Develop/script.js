@@ -2,14 +2,14 @@
 
 // Assignment code here
 
-// declared variables
+// declared variables used in code
 const lowerChars = "abcdefghijklmnopqrstuvwxyz";
 const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numberChars = "0123456789";
 const specialChars = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~\\";
 let charCount;
 
-//prompt function
+//prompt function for asking how many characters should be in the password
 function promptValidate() {
   charCount = prompt(
     "How many characters would you like in your password? (8 to 128 characters)"
@@ -27,26 +27,26 @@ function promptValidate() {
 
 function confirmInput() {
   let possibleCharacters = "";
-  //lowercase confirm
+  //lowercase letter confirmation box
   const lowerConfirm = confirm("do you want to include lowercase letters");
   if (lowerConfirm) {
     possibleCharacters += lowerChars;
   }
 
-  //uppercase confirm
+  //uppercase letter confirmation box
 
   const upperConfirm = confirm("Do you want to include uppercase letters");
   if (upperConfirm) {
     possibleCharacters += upperChars;
   }
 
-  //numbers confirm
+  //numbers confirmation box
   const numberConfirm = confirm("do you want to include numbers");
   if (numberConfirm) {
     possibleCharacters += numberChars;
   }
 
-  //special characters confirm
+  //special characters confirmation box
   const specialConfirm = confirm("do you want to include special characters");
   if (specialConfirm) {
     possibleCharacters += specialChars;
